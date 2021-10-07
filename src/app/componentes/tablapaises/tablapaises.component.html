@@ -1,0 +1,16 @@
+<div>
+    <input type="text" name="Buscar" [(ngModel)]="paisFiltro">
+</div>
+
+<button class="btn btn-secondary my-2" (click)="buscar()">Buscar</button>
+
+<ul class="list-group mb-3 listado-paises">
+    <li *ngFor="let pais of paisesFiltrados"
+        (click)="handleClick(pais)"
+        [class.selected]="pais==seleccionado"
+        class="list-group-item d-flex justify-content-between lh-condensed"
+    >
+        <h6 class="my-0">{{pais.nombre}}</h6>
+        <img src="{{pais.bandera}}" alt="Foto bandera" height="100%" width="auto">
+    </li>
+</ul>

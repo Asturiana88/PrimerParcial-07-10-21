@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4"><h2>Actor Pelicula</h2></div>
+
+        <div class="my-4 col-12 listado-actores shadow">
+            <app-listado-actor (seleccionarActor)="seleccionarActor($event)"></app-listado-actor>
+        </div>
+
+        <div class="col-12"> <hr> </div>
+
+        <div class="col-6 p-3 border border-info">
+            <h4 class="mb-3">Peliculas del actor</h4>
+            <div *ngIf="actorPeliculas">
+                <app-tablapeliculas [peliculas]="actorPeliculas" [ocultarId]="true">  
+                </app-tablapeliculas>
+            </div>
+        </div>
+
+        <div class="col-3 p-3 border border-info">
+            <h4 class="mb-3">Nacionalidad del actor</h4>
+            <div *ngIf="actorSeleccionado">
+                <h3>{{actorSeleccionado.pais?.nombre}}</h3>
+                <img width="100%" src="{{actorSeleccionado.pais?.bandera}}" alt="">
+            </div>
+        </div>
+
+        <div class="col-3 p-3 border border-info">
+            <h4 class="mb-3">Detalle actor</h4>
+            <app-detalle-actor [actor]="actorSeleccionado" *ngIf="actorSeleccionado">
+            </app-detalle-actor>
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,40 @@
+<main role="main">  
+  <div class="container mt-4">
+    <div class="form-group mb-4" >
+      <div class="row">
+        <div class="col-6">
+          <input [(ngModel)]="filtro"  class="form-control" placeholder="Buscar Pelicula" type="text">
+        </div>
+        <div class="col-6">
+          <input type="button" class="btn btn-primary" value="Buscar" (click)="filtrar()" >
+          <input type="button" class="btn btn-warning mx-3" value="Limpiar" (click)="clear()" >
+        </div>
+      </div>
+      <div class="col-12 peliculas-wrapper shadow mt-2 p-4">
+        <app-tablapeliculas [peliculas]="peliculasFiltradas" (seleccionarPelicula)="seleccionarPelicula($event)">  
+        </app-tablapeliculas>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container mt-4"> 
+    <div class="row">
+      <ng-container *ngIf="peliculaSeleccionada" >
+        <div class="col-4 offset-1 details-wrapper">
+          <h4>Detalle Pelicula</h4>
+            <app-detallepelicula [pelicula]="peliculaSeleccionada">
+            </app-detallepelicula>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4 details-wrapper" *ngIf="peliculaSeleccionada.actor">
+          <h4>Actor</h4>
+          <h3>{{peliculaSeleccionada.actor.nombre}} {{peliculaSeleccionada.actor.apellido}}</h3>
+          <p> <strong>Edad</strong> {{peliculaSeleccionada.actor.edad}} </p>
+          <p> <strong>Nacionalidad</strong> {{peliculaSeleccionada.actor.pais?.nombre}} </p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</main>

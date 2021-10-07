@@ -1,0 +1,17 @@
+body {
+  padding-top: 3.5rem;
+}
+
+.busqueda {
+  max-width: 450px;
+}
+
+.peliculas-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.details-wrapper {
+  box-shadow: -2px 4px 8px 4px #0000005c;
+  padding: 20px;
+}

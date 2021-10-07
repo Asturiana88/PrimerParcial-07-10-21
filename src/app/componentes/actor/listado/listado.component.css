@@ -1,0 +1,11 @@
+td {
+  height: 50px;
+}
+
+tr:hover {
+  background-color: rgba(128, 128, 128, 0.473);
+}
+
+.selected {
+  background-color: rgba(23, 153, 23, 0.473);
+}

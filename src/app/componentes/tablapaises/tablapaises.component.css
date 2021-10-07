@@ -1,0 +1,17 @@
+.listado-paises {
+  max-height: 300px;
+  overflow: auto;
+}
+
+li {
+  height: 50px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: rgba(128, 128, 128, 0.404);
+}
+
+.selected {
+  background-color: rgba(124, 255, 64, 0.404);
+}

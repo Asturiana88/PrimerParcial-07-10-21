@@ -1,0 +1,17 @@
+table {
+  max-width: 80vw;
+  table-layout: fixed;
+}
+
+tr:hover {
+  background-color: rgba(0, 0, 255, 0.329);
+  cursor: pointer;
+}
+
+tr {
+  line-height: 14px;
+}
+
+td {
+  height: 90px;
+}

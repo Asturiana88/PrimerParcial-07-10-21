@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center table-wrapper">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" *ngIf="!ocultarId">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha Estreno</th>
+            <th scope="col">Cantidad Publico</th>
+            <th scope="col">Foto Pelicula</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="peliculas">
+          <tr *ngFor="let pelicula of peliculas" (click)="handleClick(pelicula)">
+            <td  *ngIf="!ocultarId">{{pelicula.id}}</td>
+            <td>{{pelicula.nombre}}</td>
+            <td>{{pelicula.tipo}}</td>
+            <td>{{pelicula.fechaEstreno}}</td>
+            <td>{{pelicula.cantidadPublico}}</td>
+            <td><img height="100%" width="auto" src={{pelicula.fotoPelicula}}></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

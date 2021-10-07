@@ -1,0 +1,39 @@
+<div class="container mt-5">  
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Nacionalidad</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+
+      <app-tablapaises (seleccionarPais)="seleccionarPais($event)"> </app-tablapaises>
+    </div>
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Alta actor</h4>
+      <form class="needs-validation" novalidate (submit)="altaActor()">
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Nombre</label>
+            <input [(ngModel)]="actor.nombre" type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback"> El nombre es requerido </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Apellido</label>
+            <input  [(ngModel)]="actor.apellido" type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            <div class="invalid-feedback"> Apellido es requerido </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="edad">Edad </label>
+          <input [(ngModel)]="actor.edad" type="number" min="1" max="99" class="form-control" id="edad" required>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Crear actor</button>
+      </form>
+    </div>
+  </div>
+</div>
