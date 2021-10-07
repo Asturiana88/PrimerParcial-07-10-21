@@ -26,6 +26,9 @@ import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.c
 import { ListadoproductosComponent } from './componentes/listadoproductos/listadoproductos.component';
 import { DetalleProductoComponent } from './componentes/detalle-producto/detalle-producto.component';
 import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
+import { ListadoContainerComponent } from './componentes/listado-container/listado-container.component';
+import { DetalleContainerComponent } from './componentes/detalle-container/detalle-container.component';
+import { AltaContainerComponent } from './componentes/alta-container/alta-container.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.co
     ListadoproductosComponent,
     DetalleProductoComponent,
     DetallePaisComponent,
+    ListadoContainerComponent,
+    DetalleContainerComponent,
+    AltaContainerComponent,
   ],
   imports: [
     BrowserModule,

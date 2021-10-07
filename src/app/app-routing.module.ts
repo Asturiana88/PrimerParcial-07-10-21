@@ -11,6 +11,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.component';
 import { ListadoproductosComponent } from './componentes/listadoproductos/listadoproductos.component';
 import { CanActivateService } from './servicio/can-activate.service';
+import { ListadoContainerComponent } from './componentes/listado-container/listado-container.component';
 
 const routes: Routes = [
   {path: "busqueda", component: BusquedaComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "alta-producto", component: AltaproductoComponent},
   {path: "listado-producto", component: ListadoproductosComponent, canActivate:[CanActivateService]},
+  {path: "abm-container", component: ListadoContainerComponent, canActivate:[CanActivateService]},
   {path: "**", component: BienvenidoComponent}
 ];
 

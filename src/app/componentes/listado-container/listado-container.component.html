@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3>Lista containers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Capacidad</th>
+                        <th>Marca</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="containers | async as containerData">
+                    <tr (click)="seleccionarContainer(container)" *ngFor="let container of containerData">
+                        <td>{{container.codigo}}</td>
+                        <td>{{container.capacidad}}</td>
+                        <td>{{container.marca}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-3">
+            <h3>Alta container</h3>
+            <label for="codigo">Codigo</label>
+            <br>
+            <input type="text" [(ngModel)]="newContainer.codigo" name="codigo" id="codigo">
+            <br>
+            <label for="Capacidad">Capacidad</label>
+            <br>
+            <input type="number" [(ngModel)]="newContainer.capacidad" name="Capacidad" id="codigo">
+            <br>
+            <label for="marca">Marca</label>
+            <br>
+            <input type="text" [(ngModel)]="newContainer.marca" name="marca" id="codigo">
+
+            <button class="btn btn-primary mt-3" (click)="crearContainer()">
+                Crear Container
+            </button>
+        </div>
+
+        <div class="col-3" *ngIf="containerSeleccionado">
+            <h3>Container Seleccionado</h3>
+            <h5>{{containerSeleccionado.codigo}}</h5>
+            <h5>{{containerSeleccionado.capacidad}}</h5>
+            <h5>{{containerSeleccionado.marca}}</h5>
+        </div>
+    </div>
+</div>
