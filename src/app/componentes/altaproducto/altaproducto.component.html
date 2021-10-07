@@ -1,0 +1,46 @@
+<div class="container mt-5">  
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Origen</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+
+      <app-tablapaises (seleccionarPais)="seleccionarPais($event)"> </app-tablapaises>
+    </div>
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Producto</h4>
+      <form class="needs-validation" novalidate (submit)="altaProducto()">
+
+        <div class="mb-3">
+            <label for="codigo">Codigo</label>
+            <input [(ngModel)]="producto.codigo" type="text" class="form-control" id="codigo" placeholder="" value="" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="descripcion">Descripcion</label>
+            <input [(ngModel)]="producto.descripcion" type="text" class="form-control" id="descripcion" placeholder="" value="" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="precio">Precio</label>
+            <input [(ngModel)]="producto.precio" type="number" class="form-control" id="precio" placeholder="" value="" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="stock">Stock</label>
+            <input [(ngModel)]="producto.stock" type="number" class="form-control" id="stock" placeholder="" value="" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="comestible">Comestible</label>
+            <input [(ngModel)]="producto.comestible" type="checkbox" id="comestible">
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Crear producto</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { TablapaisesComponent } from './componentes/tablapaises/tablapaises.component';
 import { ActorpeliculaComponent } from './componentes/actorpelicula/actorpelicula.component';
 import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor
     TablapaisesComponent,
     ActorpeliculaComponent,
     DetalleActorComponent,
+    LoginComponent,
+    AltaproductoComponent,
   ],
   imports: [
     BrowserModule,

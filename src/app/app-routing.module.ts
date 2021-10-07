@@ -7,6 +7,8 @@ import { AltaComponent as AltaActor } from './componentes/actor/alta/alta.compon
 import { ListadoComponent as ListadoActor} from './componentes/actor/listado/listado.component';
 import { ListadoComponent as ListadoPelicula} from './componentes/peliculas/listado/listado.component';
 import { ActorpeliculaComponent } from './componentes/actorpelicula/actorpelicula.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.component';
 
 const routes: Routes = [
   {path: "busqueda", component: BusquedaComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: "actor/listado", component: ListadoActor},
   {path: "pelicula/listado", component: ListadoPelicula},
   {path: "actorpelicula", component: ActorpeliculaComponent},
+  {path: "login", component: LoginComponent},
+  {path: "alta-producto", component: AltaproductoComponent},
   {path: "**", component: BienvenidoComponent}
 ];
 

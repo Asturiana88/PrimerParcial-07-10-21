@@ -4,6 +4,23 @@
 
 <button class="btn btn-secondary my-2" (click)="buscar()">Buscar</button>
 
+<div >
+    <label for="oceania">Oceania</label>
+    <input id="oceania" type="radio" name="continent" (click)="getContinent('oceania')">
+
+    <label for="africa">Africa</label>
+    <input id="africa" type="radio" name="continent" (click)="getContinent('africa')">
+
+    <label for="americas">Americas</label>
+    <input id="americas" type="radio" name="continent" (click)="getContinent('americas')">
+
+    <label for="asia">Asia</label>
+    <input id="asia" type="radio" name="continent" (click)="getContinent('asia')">
+
+    <label for="europe">Europe</label>
+    <input id="europe" type="radio" name="continent" (click)="getContinent('europe')">
+</div>
+
 <ul class="list-group mb-3 listado-paises">
     <li *ngFor="let pais of paisesFiltrados"
         (click)="handleClick(pais)"

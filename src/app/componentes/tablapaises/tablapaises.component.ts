@@ -36,6 +36,21 @@ export class TablapaisesComponent implements OnInit {
     )
   }
 
+  getContinent(value: string){
+    this.servicioPaises.getByContinent(value)
+    .subscribe((paises:any)=>{
+      const paisesFiltrados:any = []
+      paises.map((pais:any) => {
+        console.log(pais)
+        paisesFiltrados.push({
+          nombre: pais.name,
+          bandera: pais.flags?.png
+        })
+      })
+      this.paisesFiltrados = paisesFiltrados
+    })
+  }
+
   handleClick(value:Pais){
     this.seleccionado = value;
     this.seleccionarPais.emit(value)
