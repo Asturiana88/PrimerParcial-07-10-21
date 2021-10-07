@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 mb-3"> <h2>Listado Productos</h2> </div>
+    <div class="col-8 shadow">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Comestible</th>
+            <th scope="col">Pais</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="productos | async as productosData">
+          <tr *ngFor="let producto of productosData" (click)="handleClick(producto)">
+            <td>{{producto.codigo}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.stock}}</td>
+            <td>{{producto.comestible}}</td>
+            <td><img width="100%" src={{producto.pais?.bandera}}></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <ng-container *ngIf="prodSelec">
+        <div class="p-3 mb-3 shadow w-100">
+          <app-detalle-producto [producto]="prodSelec"></app-detalle-producto>
+        </div>
+
+        <div class="p-3 shadow w-100">
+          <h5>Origen del producto</h5>
+          <app-detalle-pais [pais]="prodSelec.pais"></app-detalle-pais>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

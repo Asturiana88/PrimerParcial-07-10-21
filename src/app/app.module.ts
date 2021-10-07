@@ -23,6 +23,9 @@ import { ActorpeliculaComponent } from './componentes/actorpelicula/actorpelicul
 import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.component';
+import { ListadoproductosComponent } from './componentes/listadoproductos/listadoproductos.component';
+import { DetalleProductoComponent } from './componentes/detalle-producto/detalle-producto.component';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.c
     DetalleActorComponent,
     LoginComponent,
     AltaproductoComponent,
+    ListadoproductosComponent,
+    DetalleProductoComponent,
+    DetallePaisComponent,
   ],
   imports: [
     BrowserModule,

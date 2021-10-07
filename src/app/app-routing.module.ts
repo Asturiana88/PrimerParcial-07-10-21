@@ -9,6 +9,8 @@ import { ListadoComponent as ListadoPelicula} from './componentes/peliculas/list
 import { ActorpeliculaComponent } from './componentes/actorpelicula/actorpelicula.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AltaproductoComponent } from './componentes/altaproducto/altaproducto.component';
+import { ListadoproductosComponent } from './componentes/listadoproductos/listadoproductos.component';
+import { CanActivateService } from './servicio/can-activate.service';
 
 const routes: Routes = [
   {path: "busqueda", component: BusquedaComponent},
@@ -19,6 +21,7 @@ const routes: Routes = [
   {path: "actorpelicula", component: ActorpeliculaComponent},
   {path: "login", component: LoginComponent},
   {path: "alta-producto", component: AltaproductoComponent},
+  {path: "listado-producto", component: ListadoproductosComponent, canActivate:[CanActivateService]},
   {path: "**", component: BienvenidoComponent}
 ];
 

@@ -4,12 +4,16 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]='[""]'>Home</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" [routerLink]='["alta-producto"]'>Alta Producto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]='["login"]'>Login</a>
-        </li>
+
+        <a class="nav-item nav-link py-2 d-none d-md-inline-block" *ngIf="authService.isLoggedIn" routerLink="listado-producto">Lista Productos</a>
+
+        <a class="nav-item nav-link py-2 d-none d-md-inline-block" *ngIf="!authService.isLoggedIn" routerLink="login">Login</a>
+        <!-- <a class="nav-item nav-link py-2 d-none d-md-inline-block" *ngIf="!authService.isLoggedIn" routerLink="registrarse">Registrarse</a> -->
+        <a class="nav-item nav-link py-2 d-none d-md-inline-block" *ngIf="authService.isLoggedIn" (click)="authService.SignOut()">Desloguearse</a>
       </ul>
     </div>
   </nav>
