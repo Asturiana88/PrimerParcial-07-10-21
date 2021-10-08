@@ -22,29 +22,11 @@
         </div>
 
         <div class="col-3">
-            <h3>Alta container</h3>
-            <label for="codigo">Codigo</label>
-            <br>
-            <input type="text" [(ngModel)]="newContainer.codigo" name="codigo" id="codigo">
-            <br>
-            <label for="Capacidad">Capacidad</label>
-            <br>
-            <input type="number" [(ngModel)]="newContainer.capacidad" name="Capacidad" id="codigo">
-            <br>
-            <label for="marca">Marca</label>
-            <br>
-            <input type="text" [(ngModel)]="newContainer.marca" name="marca" id="codigo">
-
-            <button class="btn btn-primary mt-3" (click)="crearContainer()">
-                Crear Container
-            </button>
+            <app-alta-container></app-alta-container>
         </div>
 
         <div class="col-3" *ngIf="containerSeleccionado">
-            <h3>Container Seleccionado</h3>
-            <h5>{{containerSeleccionado.codigo}}</h5>
-            <h5>{{containerSeleccionado.capacidad}}</h5>
-            <h5>{{containerSeleccionado.marca}}</h5>
+            <app-detalle-container [container]="containerSeleccionado"></app-detalle-container>
         </div>
     </div>
 </div>

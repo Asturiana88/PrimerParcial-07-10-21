@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Container } from 'src/app/clases/container';
 
 @Component({
   selector: 'app-detalle-container',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleContainerComponent implements OnInit {
 
+  @Input() container!: Container
   constructor() { }
 
   ngOnInit(): void {

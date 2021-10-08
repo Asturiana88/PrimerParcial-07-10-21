@@ -1,5 +1,5 @@
 export class Container {
-    codigo?: string;
-    marca?: string;
-    capacidad?: number;
+    codigo!: string;
+    marca!: string;
+    capacidad!: number;
 }

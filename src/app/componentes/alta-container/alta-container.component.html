@@ -1,1 +1,16 @@
-<p>alta-container works!</p>
+<h3>Alta container</h3>
+<label for="codigo">Codigo</label>
+<br>
+<input type="text" [(ngModel)]="newContainer.codigo" name="codigo" id="codigo">
+<br>
+<label for="Capacidad">Capacidad</label>
+<br>
+<input type="number" [(ngModel)]="newContainer.capacidad" name="Capacidad" id="codigo">
+<br>
+<label for="marca">Marca</label>
+<br>
+<input type="text" [(ngModel)]="newContainer.marca" name="marca" id="codigo">
+
+<button class="btn btn-primary mt-3" (click)="crearContainer()">
+    Crear Container
+</button>

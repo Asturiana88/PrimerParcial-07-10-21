@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Container } from 'src/app/clases/container';
+import { ContainerService } from 'src/app/servicio/container.service';
 
 @Component({
   selector: 'app-alta-container',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaContainerComponent implements OnInit {
 
-  constructor() { }
+  newContainer = new Container();
+  constructor(private containerService: ContainerService) { }
 
   ngOnInit(): void {
   }
 
+
+  crearContainer(){
+    if(
+      this.newContainer.capacidad &&
+      this.newContainer.codigo &&
+      this.newContainer.marca
+    ){
+      this.containerService.altaContainer(this.newContainer)
+    }
+  }
 }
